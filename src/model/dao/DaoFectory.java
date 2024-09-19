@@ -1,6 +1,7 @@
 package model.dao;
 
 import db.DB;
+import model.dao.impl.DepartmentDaoJDBC;
 import model.dao.impl.SellerDaoJDBC;
 
 public class DaoFectory {
@@ -8,9 +9,8 @@ public class DaoFectory {
 		return new SellerDaoJDBC(DB.getConnection());
 	}
 
-    public static SellerDao getConnection() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getConnection'");
+    public static DepartmentDao createDepartmentDao() {
+        return new DepartmentDaoJDBC(DB.getConnection());
     }
 
    

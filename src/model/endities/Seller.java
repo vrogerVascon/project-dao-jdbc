@@ -25,10 +25,7 @@ public class Seller implements Serializable {
 		this.department = department;
 	}
 
-    public Seller(Object object, String string, String string2, application.Date date, double d,
-            Department department2) {
-        //TODO Auto-generated constructor stub
-    }
+    
 
     public Integer getId() {
         return id;
