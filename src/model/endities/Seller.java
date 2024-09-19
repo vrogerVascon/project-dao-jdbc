@@ -17,12 +17,17 @@ public class Seller implements Serializable {
     }
 
     public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.birthDate = birthDate;
-        this.baseSalary = baseSalary;
-        this.department = department;
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.birthDate = birthDate;
+		this.baseSalary = baseSalary;
+		this.department = department;
+	}
+
+    public Seller(Object object, String string, String string2, application.Date date, double d,
+            Department department2) {
+        //TODO Auto-generated constructor stub
     }
 
     public Integer getId() {

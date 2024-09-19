@@ -38,7 +38,7 @@ public class DB {
 	}
 	
 	private static Properties loadProperties() {
-		try (FileInputStream fs = new FileInputStream("src\\db.properties")) {
+		try (FileInputStream fs = new FileInputStream("src\\db.properties2")) {
 			Properties props = new Properties();
 			props.load(fs);
 			return props;

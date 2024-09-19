@@ -1,23 +1,33 @@
 package application;
 
-import java.util.List;
+
+
+
+
+
 
 import model.dao.DaoFectory;
 import model.dao.SellerDao;
+import model.endities.Department;
 import model.endities.Seller;
+import java.util.Date;
+
+//https://github.com/acenelio/chess-system-java
 
 public class Program {
     public static void main(String[] args) {
     
-        SellerDao sellerDao = DaoFectory.creatSellerDao();
+        SellerDao sellerDao = DaoFectory.createSellerDao();
 
-        System.out.println("\n=== TEST 3: seller findAll =====");
-		List<Seller> list = sellerDao.findAll();
-        for (Seller obj : list) {
-            System.out.println(obj);
-            System.out.println();
-            
-        }
+        Department dep = new Department(2, null);
+
+        System.out.println("\n=== TEST 4: seller insert =====");
+
+        Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, dep);
+        sellerDao.isert(newSeller);
+        System.out.println("Inserted! New id = " + newSeller.getId());
+
+
+		
     }
-
 }
